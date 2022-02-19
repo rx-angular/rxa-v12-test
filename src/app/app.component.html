@@ -1,11 +1,11 @@
 <h1 id="title">RXA v12 test</h1>
 <h3>rxLet</h3>
-<div *rxLet="state$; let state">
+<div id="rx-let" *rxLet="state$; let state">
   {{ state | json }}
 </div>
 <h3>rxFor</h3>
 <ul>
-  <li *rxFor="let data of test$">
+  <li class="rx-for" *rxFor="let data of test$">
     {{ data }}
   </li>
 </ul>

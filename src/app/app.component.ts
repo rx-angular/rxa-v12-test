@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { selectSlice } from '@rx-angular/state/selections';
+// import { selectSlice } from '@rx-angular/state/selections';
 import { insert } from '@rx-angular/cdk/transformations';
-import { RxState } from '@rx-angular/state';
+import { RxState, selectSlice } from '@rx-angular/state';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -10,7 +10,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent extends RxState<{ test: string[] }> {
-  title = 'v12-project';
+  title = 'rxa-v12-project';
 
   state$ = this.select();
   test$ = this.select().pipe(
